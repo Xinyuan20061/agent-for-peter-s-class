@@ -13,6 +13,8 @@ from app.models import (
     Task,
     StudyPlan,
     StudyPlanTask,
+    Note,
+    NoteSyncRecord,
 )
 from app.routers import (
     auth,
@@ -22,6 +24,7 @@ from app.routers import (
     agent,
     tasks,
     study_plans,
+    notes,
 )
 
 
@@ -83,6 +86,13 @@ app.include_router(
     study_plans.router,
     prefix="/api/study-plans",
     tags=["学习计划"],
+)
+
+# 将笔记路由注册到应用中，所有与笔记相关的API都以 /api/notes/ 开头
+app.include_router(
+    notes.router,
+    prefix="/api/notes",
+    tags=["课程笔记"],
 )
 
 # 定义根路径的GET请求处理函数，返回一个欢迎信息和应用状态
