@@ -9,3 +9,5 @@ from app.models.study_plan import StudyPlan
 from app.models.study_plan_task import StudyPlanTask
 from app.models.note import Note
 from app.models.note_sync_record import NoteSyncRecord
+from app.models.learning_record import LearningRecord
+from app.models.course_progress import CourseProgress

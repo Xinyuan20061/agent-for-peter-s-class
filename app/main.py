@@ -15,6 +15,8 @@ from app.models import (
     StudyPlanTask,
     Note,
     NoteSyncRecord,
+    LearningRecord,
+    CourseProgress,
 )
 from app.routers import (
     auth,
@@ -25,6 +27,8 @@ from app.routers import (
     tasks,
     study_plans,
     notes,
+    learning,
+    dashboard,
 )
 
 
@@ -93,6 +97,20 @@ app.include_router(
     notes.router,
     prefix="/api/notes",
     tags=["课程笔记"],
+)
+
+# 将学习记录路由注册到应用中，所有与学习记录相关的API都以 /api/learning/ 开头
+app.include_router(
+    learning.router,
+    prefix="/api/learning",
+    tags=["学习进度"],
+)
+
+# 将仪表盘路由注册到应用中，所有与仪表盘相关的API都以 /api/dashboard/ 开头
+app.include_router(
+    dashboard.router,
+    prefix="/api/dashboard",
+    tags=["首页统计看板"],
 )
 
 # 定义根路径的GET请求处理函数，返回一个欢迎信息和应用状态
