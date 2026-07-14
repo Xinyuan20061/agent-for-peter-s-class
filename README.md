@@ -206,5 +206,6 @@ npm run build
 
 ## 仓库
 
-- GitHub：<https://github.com/hauyer/course-agent>
-- 问题反馈：<https://github.com/hauyer/course-agent/issues>
+- GitHub：<https://github.com/Xinyuan20061/Agent-for-peter-s-class>
+- 问题反馈：<https://github.com/Xinyuan20061/Agent-for-peter-s-class/issues>
+- 原始仓库：<https://github.com/hauyer/course-agent>
